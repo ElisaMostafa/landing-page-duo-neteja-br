@@ -20,7 +20,7 @@
       <div class="wa-modal-bubble">
         <p>¡Hola! 👋 ¿En qué podemos ayudarte hoy?</p>
       </div>
-      <a href="https://wa.me/34600000000?text=Hola%2C%20me%20gustar%C3%ADa%20pedir%20m%C3%A1s%20información%20sobre%20vuestros%20servicios." class="wa-modal-btn" target="_blank" rel="noopener noreferrer">
+      <a href="https://wa.me/+34691836955?text=Hola%2C%20me%20gustar%C3%ADa%20pedir%20m%C3%A1s%20información%20sobre%20vuestros%20servicios." class="wa-modal-btn" target="_blank" rel="noopener noreferrer">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.52 3.48A11.9 11.9 0 0012 0C5.37 0 0 5.37 0 12c0 2.11.55 4.17 1.6 5.99L0 24l6.17-1.6A11.95 11.95 0 0012 24c6.63 0 12-5.37 12-12 0-3.2-1.25-6.22-3.48-8.52z"/></svg>
         Abrir WhatsApp
       </a>
