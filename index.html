@@ -29,6 +29,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/css/intlTelInput.min.css" />
   <link rel="stylesheet" href="style.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
 </head>
 
 <body>
@@ -132,42 +135,122 @@
           <p>Soluciones de limpieza y reparos adaptadas a tus necesidades en Barcelona y toda la región.</p>
         </div>
 
-        <div class="servicios-grid" role="list">
+        <div class="servicios-slick">
 
-          <article class="card reveal reveal-delay-1" role="listitem">
-            <div class="card-icon" aria-hidden="true">
-              <i class="fa fa-home" aria-hidden="true"></i>
-            </div>
+          <article class="card">
+            <div class="card-icon" aria-hidden="true"><i class="fa fa-home"></i></div>
             <h3 class="card-title">Limpieza Residencial</h3>
             <p>Regular, profunda o post-mudanza. Dejamos tu hogar impecable con productos de calidad y técnicas
               profesionales.</p>
           </article>
 
-          <article class="card reveal reveal-delay-2" role="listitem">
-            <div class="card-icon" aria-hidden="true">
-              <i class="fa fa-building" aria-hidden="true"></i>
-            </div>
+          <article class="card">
+            <div class="card-icon" aria-hidden="true"><i class="fa fa-building"></i></div>
             <h3 class="card-title">Limpieza para Airbnb</h3>
             <p>Garantizamos la satisfacción de tus huéspedes con un servicio rápido, detallado y orientado a las mejores
               valoraciones.</p>
           </article>
 
-          <article class="card reveal reveal-delay-3" role="listitem">
-            <div class="card-icon" aria-hidden="true">
-              <i class="fa fa-check-circle" aria-hidden="true"></i>
-            </div>
-            <h3 class="card-title">Pequeños Reparos (Manitas)</h3>
-            <p>Arreglos rápidos y prácticos para el día a día: enchufes, puertas, baldosas, montaje de muebles y mucho
-              más.</p>
+          <article class="card">
+            <div class="card-icon" aria-hidden="true"><i class="fa fa-hard-hat"></i></div>
+            <h3 class="card-title">Limpieza Post-Obra</h3>
+            <p>Limpieza profunda tras reformas. Eliminación de polvo, residuos y suciedad pesada.</p>
           </article>
 
-          <article class="card reveal reveal-delay-1" role="listitem">
-            <div class="card-icon" aria-hidden="true">
-              <i class="fa fa-list" aria-hidden="true"></i>
-            </div>
+          <article class="card">
+            <div class="card-icon" aria-hidden="true"><i class="fa fa-check-circle"></i></div>
+            <h3 class="card-title">Pequeños Reparos (Manitas)</h3>
+            <p>Arreglos rápidos y prácticos: enchufes, puertas, baldosas, montaje de muebles y mucho más.</p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon" aria-hidden="true"><i class="fa fa-list"></i></div>
             <h3 class="card-title">Organización de Ambientes</h3>
             <p>Ordenamos y optimizamos cada rincón de tu espacio para que todo esté siempre en su lugar.</p>
           </article>
+
+          <article class="card">
+            <div class="card-icon" aria-hidden="true"><i class="fa fa-couch"></i></div>
+            <h3 class="card-title">Limpieza de Sofás y Tapicería</h3>
+            <p>Limpieza profunda de sofás, sillones y colchones. Eliminación de manchas, ácaros y olores con productos
+              profesionales.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════ ANTES Y DESPUÉS ═══════════════ -->
+    <section id="antes-despues" aria-labelledby="ad-titulo">
+      <div class="container">
+
+        <div class="ad-header servicios-header reveal">
+          <span class="section-label">Resultados reales</span>
+          <h2 class="section-title" id="ad-titulo">Antes y después</h2>
+          <p>Arrastra el divisor para ver la transformación que logramos en cada espacio.</p>
+        </div>
+
+        <div class="ad-grid">
+
+          <div class="ad-item reveal reveal-delay-1">
+            <div class="ad-item-label">Limpieza Residencial</div>
+            <div class="slider-wrap" data-slider>
+              <img class="img-depois" src="imagens/estofado-depois.webp" alt="Después de la limpieza residencial"
+                draggable="false">
+              <div class="img-antes-wrap"><img src="imagens/estofado-antes.webp" alt="Antes de la limpieza residencial"
+                  draggable="false"></div>
+              <div class="slider-line"></div>
+              <div class="slider-handle">
+                <svg viewBox="0 0 20 20" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <polyline points="6,4 2,10 6,16" />
+                  <polyline points="14,4 18,10 14,16" />
+                </svg>
+              </div>
+              <span class="badge-antes">Antes</span>
+              <span class="badge-depois">Después</span>
+            </div>
+          </div>
+
+          <div class="ad-item reveal reveal-delay-2">
+            <div class="ad-item-label">Limpieza Airbnb</div>
+            <div class="slider-wrap" data-slider>
+              <img class="img-depois" src="imagens/geladeora-depois.webp" alt="Después de la limpieza Airbnb"
+                draggable="false">
+              <div class="img-antes-wrap"><img src="imagens/geladeira-antes.webp" alt="Antes de la limpieza Airbnb"
+                  draggable="false"></div>
+              <div class="slider-line"></div>
+              <div class="slider-handle">
+                <svg viewBox="0 0 20 20" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <polyline points="6,4 2,10 6,16" />
+                  <polyline points="14,4 18,10 14,16" />
+                </svg>
+              </div>
+              <span class="badge-antes">Antes</span>
+              <span class="badge-depois">Después</span>
+            </div>
+          </div>
+
+          <div class="ad-item reveal reveal-delay-3">
+            <div class="ad-item-label">Organización de Ambientes</div>
+            <div class="slider-wrap" data-slider>
+              <img class="img-depois" src="imagens/tapeceria-depois.webp" alt="Después de la organización"
+                draggable="false">
+              <div class="img-antes-wrap"><img src="imagens/tapeceria-antes.webp" alt="Antes de la organización"
+                  draggable="false"></div>
+              <div class="slider-line"></div>
+              <div class="slider-handle">
+                <svg viewBox="0 0 20 20" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <polyline points="6,4 2,10 6,16" />
+                  <polyline points="14,4 18,10 14,16" />
+                </svg>
+              </div>
+              <span class="badge-antes">Antes</span>
+              <span class="badge-depois">Después</span>
+            </div>
+          </div>
 
         </div>
       </div>
@@ -308,12 +391,14 @@
     </div>
   </footer>
 
-
   <script src="js/script.js"></script>
   <script src="js/modal-whatsapp.js" defer></script>
   <script src="https://unpkg.com/imask"></script>
   <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/js/intlTelInput.min.js"></script>
   <script src="js/form-whats.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+  <script src="js/slick-servicos.js"></script>
 </body>
 
 </html>

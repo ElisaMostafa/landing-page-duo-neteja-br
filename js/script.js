@@ -33,3 +33,26 @@
       btn.style.background = '#1a7c4e';
       btn.disabled = true;
     });
+
+  document.querySelectorAll('[data-slider]').forEach(wrap => {
+  const antesWrap = wrap.querySelector('.img-antes-wrap');
+  const line = wrap.querySelector('.slider-line');
+  const handle = wrap.querySelector('.slider-handle');
+  let dragging = false;
+
+  function setPos(x) {
+    const rect = wrap.getBoundingClientRect();
+    let pct = ((x - rect.left) / rect.width) * 100;
+    pct = Math.max(2, Math.min(98, pct));
+    antesWrap.style.width = pct + '%';
+    line.style.left = pct + '%';
+    handle.style.left = pct + '%';
+  }
+
+  wrap.addEventListener('mousedown', e => { dragging = true; setPos(e.clientX); e.preventDefault(); });
+  wrap.addEventListener('touchstart', e => { dragging = true; setPos(e.touches[0].clientX); }, { passive: true });
+  document.addEventListener('mousemove', e => { if (dragging) setPos(e.clientX); });
+  document.addEventListener('touchmove', e => { if (dragging) setPos(e.touches[0].clientX); }, { passive: true });
+  document.addEventListener('mouseup', () => dragging = false);
+  document.addEventListener('touchend', () => dragging = false);
+});
