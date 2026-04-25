@@ -1,16 +1,16 @@
 (() => {
-    // ─── HTML ───
-    const html = `
+  // ─── HTML ───
+  const html = `
   <div class="wa-float" id="waFloat" aria-label="Abrir WhatsApp">
     <button class="wa-btn" id="waBtn" aria-label="Contactar por WhatsApp" aria-expanded="false">
-      <img src="imagens/whatsapp-modal.png" alt="" aria-hidden="true" width="58" height="58" />
+      <img src="../imagens/whatsapp-modal.png" alt="" aria-hidden="true" width="58" height="58" />
     </button>
 
     <div class="wa-modal" id="waModal" role="dialog" aria-modal="true" aria-label="Contacto por WhatsApp">
       <button class="wa-modal-close" id="waClose" aria-label="Cerrar">✕</button>
       <div class="wa-modal-header">
         <div class="wa-avatar" aria-hidden="true">
-            <img src="imagens/whatsapp-modal.png" alt="Duo Neteja BR" width="42" height="42" />
+            <img src="../imagens/whatsapp-modal.png" alt="Duo Neteja BR" width="42" height="42" />
         </div>
         <div>
           <p class="wa-modal-name">Duo Neteja BR</p>
@@ -27,8 +27,8 @@
     </div>
   </div>`;
 
-    // ─── CSS ───
-    const css = `
+  // ─── CSS ───
+  const css = `
   .wa-float {
     position: fixed;
     bottom: 2rem; right: 2rem;
@@ -146,29 +146,29 @@
     transform: translateY(-1px);
   }`;
 
-    // ─── INJECT ───
-    document.head.insertAdjacentHTML('beforeend', `<style>${css}</style>`);
-    document.body.insertAdjacentHTML('beforeend', html);
+  // ─── INJECT ───
+  document.head.insertAdjacentHTML('beforeend', `<style>${css}</style>`);
+  document.body.insertAdjacentHTML('beforeend', html);
 
-    // ─── LOGIC ───
-    const waBtn = document.getElementById('waBtn');
-    const waModal = document.getElementById('waModal');
-    const waClose = document.getElementById('waClose');
+  // ─── LOGIC ───
+  const waBtn = document.getElementById('waBtn');
+  const waModal = document.getElementById('waModal');
+  const waClose = document.getElementById('waClose');
 
-    waBtn.addEventListener('click', () => {
-        const isOpen = waModal.classList.toggle('open');
-        waBtn.setAttribute('aria-expanded', isOpen);
-    });
+  waBtn.addEventListener('click', () => {
+    const isOpen = waModal.classList.toggle('open');
+    waBtn.setAttribute('aria-expanded', isOpen);
+  });
 
-    waClose.addEventListener('click', () => {
-        waModal.classList.remove('open');
-        waBtn.setAttribute('aria-expanded', false);
-    });
+  waClose.addEventListener('click', () => {
+    waModal.classList.remove('open');
+    waBtn.setAttribute('aria-expanded', false);
+  });
 
-    document.addEventListener('click', (e) => {
-        if (!document.getElementById('waFloat').contains(e.target)) {
-            waModal.classList.remove('open');
-            waBtn.setAttribute('aria-expanded', false);
-        }
-    });
+  document.addEventListener('click', (e) => {
+    if (!document.getElementById('waFloat').contains(e.target)) {
+      waModal.classList.remove('open');
+      waBtn.setAttribute('aria-expanded', false);
+    }
+  });
 })();
