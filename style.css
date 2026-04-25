@@ -408,12 +408,10 @@
   margin: 0 auto;
 }
 
-/* ─── SLICK WRAPPER ─── */
 .servicios-slick {
   padding: 0.5rem 0 3.5rem;
 }
 
-/* 🔥 CORREÇÃO PRINCIPAL (cards mesma altura) */
 .servicios-slick .slick-track {
   display: flex !important;
 }
@@ -428,7 +426,6 @@
   width: 100%;
 }
 
-/* ─── DOTS ─── */
 .servicios-slick .slick-dots {
   bottom: 0;
 }
@@ -444,7 +441,6 @@
   opacity: 1;
 }
 
-/* ─── SETAS ─── */
 .servicios-slick .slick-prev,
 .servicios-slick .slick-next {
   width: 44px;
@@ -500,9 +496,6 @@
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(90deg, var(--verde), var(--verde-claro));
-  transform: scaleX(0);
-  transform-origin: left;
   transition: transform var(--transition);
   border-radius: var(--radius) var(--radius) 0 0;
 }
@@ -518,9 +511,6 @@
 }
 
 .card-icon {
-  width: 56px;
-  height: 56px;
-  background: var(--verde-mint);
   border-radius: 14px;
   display: flex;
   align-items: center;
@@ -539,7 +529,6 @@ h3.card-title {
   color: var(--texto);
 }
 
-/* 🔥 CONTROLE DE ALTURA DO TEXTO */
 .card p {
   font-size: 0.95rem;
   color: var(--cinza);
@@ -548,9 +537,138 @@ h3.card-title {
   flex-grow: 1;
 
   display: -webkit-box;
-  -webkit-line-clamp: 4;
+  -webkit-line-clamp: 6;
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+
+/* ─── ANTES Y DESPUÉS ─── */
+#antes-despues {
+  background: var(--branco);
+}
+
+.ad-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.6rem;
+}
+
+.ad-item {
+  background: var(--branco);
+  border-radius: var(--radius);
+  border: 1px solid var(--borda);
+  box-shadow: 0 2px 16px rgba(26, 124, 78, 0.06);
+  overflow: hidden;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.ad-item:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow);
+}
+
+.ad-item-label {
+  padding: 0.9rem 1.4rem;
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--texto);
+  border-bottom: 1px solid var(--borda);
+}
+
+.slider-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  cursor: ew-resize;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.slider-wrap img {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.img-depois { z-index: 1; }
+
+.img-antes-wrap {
+  position: absolute;
+  top: 0; left: 0;
+  width: 50%; height: 100%;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.img-antes-wrap img {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100vw;
+  max-width: 600px;
+  height: 100%;
+}
+
+.slider-line {
+  position: absolute;
+  top: 0; left: 50%;
+  width: 2px; height: 100%;
+  background: #fff;
+  z-index: 4;
+  box-shadow: 0 0 8px rgba(0,0,0,0.3);
+}
+
+.slider-handle {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 42px; height: 42px;
+  background: var(--verde);
+  border-radius: 50%;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 12px rgba(26, 124, 78, 0.4);
+  border: 3px solid #fff;
+  transition: background var(--transition);
+}
+
+.slider-wrap:hover .slider-handle,
+.slider-wrap:active .slider-handle {
+  background: var(--verde-claro);
+}
+
+.slider-handle svg {
+  width: 18px; height: 18px;
+}
+
+.badge-antes,
+.badge-depois {
+  position: absolute;
+  bottom: 12px;
+  z-index: 6;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.28rem 0.8rem;
+  border-radius: 50px;
+}
+
+.badge-antes {
+  left: 12px;
+  background: rgba(26, 124, 78, 0.85);
+  color: #fff;
+}
+
+.badge-depois {
+  right: 12px;
+  background: rgba(245, 200, 66, 0.9);
+  color: var(--texto);
 }
 
  /* ─── CONTATO ─── */
@@ -624,9 +742,6 @@ h3.card-title {
 .iti {
   width: 100%;
 }
-
-
-
 
  .form-card {
    background: var(--creme);
